@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h1>AI_Pad</h1>
+
+<br>
+<h2>Trending in your country : </h2>
+    <% for(var i = 0 ; i< result.default.trendingSearchesDays[0].trendingSearches.length ; i++){ %>
+     
+      <p> <%= i + " "%> <%= result.default.trendingSearchesDays[0].trendingSearches[i].title.query %> </p>
+  <%  } %>
+
+<br>
+<h2>Some info about article you are about to write :</h2>
+<form method = 'POST' action = '/pad' >
+
+    <input type = "text" name = "heading" id = "heading" placeholder="Title" required />
+    <br>
+    <p>Short description : </p><br>
+    <textarea id="des" name="des" rows="4" cols="50" required></textarea>
+     
+    <input type = 'submit' value = 'Next' />    
+
+</form>
+
+<h2>AI generated title : </h2>
+<form action = '/ai_title' target = '_blank' method = 'POST'>
+    <p>Short description : </p><br>
+    <textarea id="des" name="des" rows="4" cols="50"></textarea><br><br>
+        <input type = 'text' name = 'ran' id = 'ran' placeholder="Seed words (separated by commas)" required /><br><br>
+        
+<input type = 'submit' value = 'Get AI generated titles' />
+</form>
+
+</center>
+
+</body>
+</html>

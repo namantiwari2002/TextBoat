@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link href="../hem.css" rel="stylesheet">
+
+  </head>
+<body>
+
+<h1>AI_Pad <br> </h1>
+<h2>Topic : <%= title%></h2>
+<p>Description : <%= desc%></p>
+<p><a href= "/ai_generate" target = "_blank">  Generate AI text  </a></p>
+<h2>Related Topics : </h2>
+    <% for(var i in value){ %>
+     
+        <a href= "/related_tag/<%= value[i]%>" target = "_blank">  <%= value[i]%>  </a><br>
+    
+
+  <%  } %>
+
+<br>
+
+<button id = "getTags" name = "getTags">Get More Tags</button><br>
+
+<button onclick="format()" class="f btn2">Analysis</button>
+
+<div id="output" class="f"></div>
+
+<div id="right">
+  <h1></h1>
+  <div id="adverb" class="adverb counter f"></div>
+  <div id="passive" class="passive counter f"></div>
+  <div id="complex" class="complex counter f"></div>
+  <div id="hardSentence" class="hardSentence counter f"></div>
+  <div id="veryHardSentence" class="veryHardSentence counter f"></div>
+</div>
+
+<div id="Tagss"></div>
+
+
+<h1 id="title">Write content :</h1>
+  <form id="reviewForm" method = "POST" action = "/report" >
+    
+    <textarea id="review" rows="10" cols="50" name = "review"></textarea><br><br>
+
+    <input type = "submit" value = "Finish Writing" />
+    
+  </form><br>
+
+  <div id="emojiSection"></div>
+
+  <div id="statsSection"></div>
+
+  <script type="text/javascript" src="../senti.js"></script>
+  <script type="text/javascript" src="../more_tags.js"></script>
+  <script type="text/javascript" src="../hem.js"></script>
+  <script type="text/javascript" src="../text_stats.js"></script>
+
+
+
+</body>
+</html>

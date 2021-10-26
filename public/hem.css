@@ -1,0 +1,28 @@
+.f{
+    font-family: 'Poppins', sans-serif;
+  }
+  .adverb {
+      background: #e29ca8;
+    }
+    
+    .qualifier {
+      background: #66ec93;
+    }
+    
+    .passive {
+      background: #c4ed9d;
+    }
+    
+    .complex {
+      background: #8a8bf5;
+    }
+    
+    .hardSentence {
+      background: #f7ecb5;
+    }
+    
+    .veryHardSentence {
+      background: #e4b9b9;
+    }
+    
+  

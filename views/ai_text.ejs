@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h1>AI_Pad</h1>
+
+<% if(this.output2){ %>
+
+    <h2> AI generated text : </h2>
+    <form action = '/ai_generate'  method = 'POST'>
+        <p>Short description : </p><br>
+        <textarea id="des" name="des" rows="4" cols="50"></textarea> <br><br>
+           
+    <input type = 'submit' value = 'Get AI generated titles' />
+    </form>
+    
+    <br>
+    
+    <h3><%= output2%></h3>
+    
+<% }else{ %>
+
+    <h2>AI generated text : </h2>
+<form action = '/ai_generate'  method = 'POST'>
+    <p>Short description : </p><br>
+    <textarea id="des" name="des" rows="4" cols="50"></textarea><br><br>
+     
+<input type = 'submit' value = 'Get AI generated titles' />
+</form>
+   
+<% } %>   
+
+</center>
+
+</body>
+</html>
+
+
+
+
